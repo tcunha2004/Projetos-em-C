@@ -1,0 +1,18 @@
+int main(void) {
+  float Ranual, Depend, Rliquida;
+  printf(" Digite sua renda anual: \n");
+  scanf("%f", &Ranual);
+  printf(" Digite quantos dependentes voce possui?: \n");
+  scanf("%f", &Depend);
+  Rliquida = Ranual - (Ranual * 0.02 * Depend);
+  if (Ranual < 20000) {
+    printf("Voce nao paga imposto!");
+  } else {
+    if ((Ranual >= 20000) && (Ranual < 50000)) {
+      printf("Seu imposto é de 5%%");
+    } else {
+      if ((Ranual >= 50000) && (Ranual < 100000)) {
+      }
+      }
+    }
+  }
