@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<stdio.h>
+#include<time.h>
+
+int main(void) {
+  char OPCAO;
+  int num, SOMA, EDM;
+
+  printf("Voce quer par ou ímpar? (p ou i)\n\n");
+  scanf(" %c", &OPCAO);
+  printf("\nEscolha seu número(1 ou 2)\n");
+  scanf("%d", &num);
+
+  srand(time(NULL));
+  EDM = rand() % 3;
+
+  SOMA = num + EDM;
+
+  switch (OPCAO) {
+    case 'p':
+    if (SOMA == 2 || SOMA == 4) {
+      printf("\nVoce ganhou!");
+      printf("\nVoce escolheu %d e o pc escolheu %d", num, EDM);
+    } else if (SOMA == 1 || SOMA == 3) {
+      printf("\nVoce perdeu!");
+      printf("\nVoce escolheu %d e o pc escolheu %d", num, EDM);
+    }
+  }
+}
